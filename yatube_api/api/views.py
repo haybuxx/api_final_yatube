@@ -5,7 +5,7 @@ from api.permissions import IsAuthorOrReadOnly
 from rest_framework.permissions import (IsAuthenticated,
                                         IsAuthenticatedOrReadOnly)
 from .serializers import (CommentSerializer, FollowSerializer,
-                             GroupSerializer, PostSerializer)
+                          GroupSerializer, PostSerializer)
 from posts.models import Group, Post, Follow, User
 from rest_framework.filters import SearchFilter
 
@@ -58,4 +58,3 @@ class FollowViewSet(mixins.CreateModelMixin,
 
     def get_search_fields(self):
         return getattr(self.serializer_class.Meta, 'search_fields', [])
-
