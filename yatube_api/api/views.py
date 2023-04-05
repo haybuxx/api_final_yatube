@@ -6,7 +6,7 @@ from rest_framework.permissions import (IsAuthenticated,
                                         IsAuthenticatedOrReadOnly)
 from .serializers import (CommentSerializer, FollowSerializer,
                           GroupSerializer, PostSerializer)
-from posts.models import Group, Post, Follow, User
+from posts.models import Group, Post, Follow
 from rest_framework.filters import SearchFilter
 
 
